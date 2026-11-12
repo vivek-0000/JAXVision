@@ -1,0 +1,15 @@
+# Render "Blueprint": tells Render how to build and run the app without Docker.
+# Render reads this automatically when you choose New > Blueprint and pick the repo.
+services:
+  - type: web
+    name: jaxvision
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements-deploy.txt
+    startCommand: uvicorn server.app:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /api/health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.7
+      - key: JAX_PLATFORMS
+        value: cpu

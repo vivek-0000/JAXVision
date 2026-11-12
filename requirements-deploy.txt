@@ -1,0 +1,9 @@
+# Only what the web server needs (no tests, no TPU build). Used by render.yaml.
+jax
+flax
+optax
+numpy
+pillow
+fastapi
+uvicorn[standard]
+python-multipart

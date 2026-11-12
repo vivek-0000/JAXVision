@@ -1,0 +1,16 @@
+# Core ML stack. On a TPU VM install JAX with TPU support instead of plain "jax":
+#   pip install -U "jax[tpu]" -f https://storage.googleapis.com/jax-releases/libtpu_releases.html
+jax
+flax
+optax
+numpy
+pillow
+
+# API server
+fastapi
+uvicorn[standard]
+python-multipart
+
+# Tests
+pytest
+httpx

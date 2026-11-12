@@ -1,0 +1,37 @@
+{
+  "dataset": "cifar10",
+  "image_shape": [
+    32,
+    32,
+    3
+  ],
+  "num_classes": 10,
+  "class_names": [
+    "airplane",
+    "automobile",
+    "bird",
+    "cat",
+    "deer",
+    "dog",
+    "frog",
+    "horse",
+    "ship",
+    "truck"
+  ],
+  "mean": [
+    0.4914,
+    0.4822,
+    0.4465
+  ],
+  "std": [
+    0.247,
+    0.2435,
+    0.2616
+  ],
+  "widths": [
+    32,
+    64,
+    128
+  ],
+  "dropout": 0.25
+}

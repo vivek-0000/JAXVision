@@ -1,0 +1,50 @@
+{
+  "backend": "cpu",
+  "device_kind": "cpu",
+  "num_devices": 1,
+  "inference_jit_vs_eager": {
+    "batch_size": 128,
+    "compile_time_s": 0.356,
+    "eager_ms": 146.847,
+    "jit_ms": 75.806,
+    "speedup": 1.94,
+    "jit_images_per_sec": 1688.5
+  },
+  "inference_batch_sweep": [
+    {
+      "batch_size": 1,
+      "latency_ms": 1.182,
+      "images_per_sec": 846.2
+    },
+    {
+      "batch_size": 8,
+      "latency_ms": 3.832,
+      "images_per_sec": 2088.0
+    },
+    {
+      "batch_size": 32,
+      "latency_ms": 31.042,
+      "images_per_sec": 1030.9
+    },
+    {
+      "batch_size": 128,
+      "latency_ms": 75.937,
+      "images_per_sec": 1685.6
+    },
+    {
+      "batch_size": 512,
+      "latency_ms": 141.056,
+      "images_per_sec": 3629.8
+    }
+  ],
+  "training_scaling": [
+    {
+      "devices": 1,
+      "global_batch": 64,
+      "step_ms": 703.15,
+      "images_per_sec": 91.0,
+      "speedup_vs_1_device": 1.0,
+      "efficiency": 1.0
+    }
+  ]
+}
